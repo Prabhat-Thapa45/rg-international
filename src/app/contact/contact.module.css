@@ -1,0 +1,22 @@
+@keyframes slideUp {
+  from {
+    opacity: 0; /* Start slightly below */
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.item {
+  animation: slideUp 1.5s ease-out forwards;
+}
+
+
+@media(max-width:900px){
+  .contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
