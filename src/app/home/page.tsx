@@ -1,19 +1,14 @@
 "use client";
 import Image from "next/image";
 import AboutSection from "./aboutSection";
-import { DM_Sans } from "next/font/google";
-import styles from "./heroSection.module.css";
-
+import RGImage from "../rgimage";
 import { motion } from "framer-motion";
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["900"],
-});
+import Intro from "./intro";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex items-center justify-center h-screen bg-cover bg-center overflow-hidden">
+    <section className="relative flex flex-col items-start justify-center w-screen h-screen bg-cover bg-center overflow-hidden px-6">
       {/* Animated Background Image - Slight Scale Effect */}
       <motion.div
         initial={{ scale: 1 }}
@@ -21,64 +16,76 @@ const HeroSection = () => {
         transition={{ duration: 4, ease: "easeInOut" }}
         className="absolute inset-0 z-0"
       >
-        <Image
-          src="/worker.png"
-          alt="Hero Background"
-          layout="fill"
-          objectFit="cover"
-        />
+        <RGImage />
       </motion.div>
 
-      {/* Animated Overlay - Expands from Right to Left */}
       <motion.div
-        initial={{ opacity: 1 }}
-        animate={{opacity: 0.4 }}
-        transition={{ delay: 0.2, duration: 1.8, ease: "easeIn" }}
-        className="absolute inset-0 bg-black opacity-50"
+        initial={{ opacity: 0.8 }}
+        animate={{ opacity: 0.4 }}
+        transition={{ duration: 1, ease: "easeIn" }}
+        className="absolute inset-0"
       ></motion.div>
 
-      {/* Animated Text - Appears After Background Animation */}
+      {/* Animated Text - Aligned Properly */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2.3, duration: 1.5, ease: "easeInOut" }}
-        className="relative z-10 text-center text-white px-6"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        transition={{ staggerChildren: 0.5 }}
+        className="relative z-10 text-white mx-auto w-full max-w-[700px] sm:max-w-[90%] px-4"
       >
-        <h1 className={`text-[60px] tracking-[-0.03em] shadow-lg ${dmSans.className} ${styles.text}`}>
+        {/* Heading */}
+        <motion.h1
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+          className="text-[32px] sm:text-[3x0px] md:text-[40px] lg:text-[60px] tracking-normal shadow-lg font-bold whitespace-nowrap"
+        >
           Making your life brighter
-        </h1>
-        <p className="text-3xl shadow-lg capitalize font-extrabold">
+        </motion.h1>
+
+        {/* Subheading - Aligned */}
+        <motion.p
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 1.2, ease: "easeInOut", delay: 0.5 }}
+          className="text-sm sm:text-lg md:text-xl lg:text-2xl shadow-lg capitalize font-extrabold mt-2"
+        >
           Connecting top talent with leading industries worldwide.
-        </p>
-        <button className="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg">
-          Find Manpower
-        </button>
+        </motion.p>
+
+        {/* Button - Aligned */}
+        <motion.button
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 1.2, ease: "easeInOut", delay: 1 }}
+          className="mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md text-xs sm:text-sm md:text-base lg:text-lg"
+        >
+          <Link href="/contact">Contact Us</Link>
+        </motion.button>
       </motion.div>
     </section>
   );
 };
-const services = [
-  { name: "Recruitment & Staffing", icon: "/recruitment-icon.png" },
-  { name: "HR Consulting", icon: "/hr-icon.png" },
-  { name: "Outsourcing Solutions", icon: "/outsourcing-icon.png" },
-];
+
+
+
 
 const ServicesSection = () => {
   return (
     <section className="py-16 px-6 text-center">
       <h2 className="text-3xl font-bold">Our Services</h2>
       <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {services.map((service, index) => (
-          <div key={index} className="p-6 bg-white shadow-lg rounded-lg">
-            <Image
-              src={service.icon}
-              alt={service.name}
-              width={50}
-              height={50}
-            />
-            <h3 className="mt-4 text-xl font-semibold">{service.name}</h3>
-          </div>
-        ))}
+        
       </div>
       <a
         href="/services"
@@ -158,6 +165,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <Intro />
       <AboutSection />
       <ServicesSection />
       <IndustriesSection />

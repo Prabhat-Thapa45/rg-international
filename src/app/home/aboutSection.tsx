@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { DM_Sans } from "next/font/google";
-import { TbCertificate } from "react-icons/tb";
+import { FaRegLaughBeam } from "react-icons/fa";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -33,8 +33,7 @@ export default function AboutSection() {
   }, [inView]);
 
   return (
-    <section ref={ref} className="py-20 px-8 bg-gray-100 text-center">
-      <h2 className={`text-6xl font-extrabold mb-6 tracking-[-0.03em] ${dmSans.className}`}>About Our Company</h2>
+    <section ref={ref} className="py-20 px-8 text-center bg-gray-100">
       <div className="flex justify-center items-center gap-12">
         {/* Years in Business */}
         <div className="flex flex-col items-center">
@@ -45,9 +44,9 @@ export default function AboutSection() {
 
         {/* Successful Placements */}
         <div className="flex flex-col items-center">
-          <TbCertificate size={50}/>
+          <FaRegLaughBeam size={50}/>
           <p className="text-5xl font-extrabold ">{placements}+</p>
-          <p className="text-xl font-medium">Successful Placements</p>
+          <p className="text-xl font-medium">Happy clients</p>
         </div>
       </div>
     </section>
