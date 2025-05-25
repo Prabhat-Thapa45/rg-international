@@ -14,9 +14,10 @@ const HeroSection = () => {
         initial={{ scale: 1 }}
         animate={{ scale: 1.06 }}
         transition={{ duration: 4, ease: "easeInOut" }}
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 "
       >
         <RGImage />
+        <div className="bg-black opacity-40 w-screen h-screen z-10"></div>
       </motion.div>
 
       <motion.div
@@ -44,7 +45,7 @@ const HeroSection = () => {
             visible: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 1.2, ease: "easeInOut" }}
-          className="text-[32px] sm:text-[3x0px] md:text-[40px] lg:text-[60px] tracking-normal shadow-lg font-bold whitespace-nowrap"
+          className="text-[32px] sm:text-[3x0px] md:text-[40px] lg:text-[60px] tracking-normal font-bold whitespace-nowrap"
         >
           Making your life brighter
         </motion.h1>
@@ -56,7 +57,7 @@ const HeroSection = () => {
             visible: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 1.2, ease: "easeInOut", delay: 0.5 }}
-          className="text-sm sm:text-lg md:text-xl lg:text-2xl shadow-lg capitalize font-extrabold mt-2"
+          className="text-sm sm:text-lg md:text-xl lg:text-2xl capitalize font-extrabold mt-2"
         >
           Connecting top talent with leading industries worldwide.
         </motion.p>
@@ -68,7 +69,7 @@ const HeroSection = () => {
             visible: { opacity: 1, y: 0 },
           }}
           transition={{ duration: 1.2, ease: "easeInOut", delay: 1 }}
-          className="mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md text-xs sm:text-sm md:text-base lg:text-lg"
+          className="mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-xs sm:text-sm md:text-base lg:text-lg"
         >
           <Link href="/contact">Contact Us</Link>
         </motion.button>

@@ -50,7 +50,7 @@ useEffect(() => {
 
   
   return (
-    <nav className="fixed z-10 w-full shadow-lg bg-[var(--navbg)] text-[--foreground]">
+    <nav className="fixed z-50 w-full shadow-lg bg-[var(--navbg)] text-[--foreground]">
       <div className="px-4 mx-auto sm:px-6 lg:px-8">
         <div className="flex justify-between h-30">
           <div className="flex items-center">

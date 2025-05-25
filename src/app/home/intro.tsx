@@ -24,7 +24,7 @@ export default function Intro() {
         {/* Description */}
         <div className="text-lg md:text-xl leading-relaxed space-y-6 p-6 rounded-lg shadow-lg backdrop-blur-md">
           <p>
-            Established in 2015, RG International Co. Ltd. has been a trusted
+            Established in July 2023, RG International Co. Ltd. has been a trusted
             partner for aspiring individuals from Nepal seeking rewarding career
             opportunities in Japan. We understand the unique challenges and
             exciting prospects that come with international employment, and we
