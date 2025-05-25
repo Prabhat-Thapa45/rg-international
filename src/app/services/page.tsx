@@ -55,6 +55,8 @@ export default function Services() {
     </div>
   );
 }
+
+
 function CategorySection({
   category,
 }: {
@@ -63,9 +65,10 @@ function CategorySection({
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="bg-white rounded-lg shadow-md w-full max-w-[800px] mx-auto transition-all hover:bg-gray-200">
+    <div className="relative bg-white p-6 rounded-lg shadow-md w-full max-w-[800px] mx-auto transition-all hover:bg-gray-200">
+      {/* Header Section */}
       <div
-        className="cursor-pointer flex justify-between items-center w-full p-6 m-4`  rounded-md transition-colors duration-300"
+        className="relative cursor-pointer flex justify-between items-center w-full p-4 rounded-md transition-colors duration-300 z-20"
         onClick={() => setExpanded(!expanded)}
       >
         <h3 className="text-2xl font-semibold">{category.category}</h3>
@@ -74,16 +77,16 @@ function CategorySection({
         </span>
       </div>
 
-      {/* Expandable Services Grid with Smooth Animation */}
+      {/* Expandable Services Grid */}
       <div
-        className={`grid transition-all duration-1000 ease-in-out overflow-visible ${
+        className={`relative grid transition-all duration-1000 ease-in-out ${
           expanded ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-        } grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4`}
+        } overflow-visible grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 z-10`}
       >
         {category.services.map((service) => (
           <div
             key={service.id}
-            className="p-4 bg-gray-50 rounded-lg transition-all duration-500 ease-out perspective-1000 hover:-translate-2 hover:scale-110  hover:shadow-xl "
+            className="relative p-4 bg-gray-50 rounded-lg transition-all duration-500 ease-out perspective-1000 hover:scale-110 hover:shadow-xl"
           >
             <h4 className="text-xl font-medium flex items-center">
               <span className="mr-2">{service.icon}</span> {service.title}
