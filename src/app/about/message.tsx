@@ -34,7 +34,7 @@ export default function MessageFromDirector() {
             Our goal is to make lives brighter by fostering global connections and sustainable growth.
           </p>
           <p className="text-lg sm:text-xl font-bold text-center mt-8">
-            "At RG International, we believe in building a future where businesses and people thrive together."
+          &apos;At RG International, we believe in building a future where businesses and people thrive together.&apos;
           </p>
 
           {/* Director Signature */}
