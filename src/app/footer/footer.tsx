@@ -14,7 +14,7 @@ export default function Footer() {
         {/* Left: Organization Name & Quick Links */}
         <div className="lg:w-1/3 flex flex-col items-center lg:items-start">
           <Image
-            src="/light.png"
+            src="/logo.jpg"
             alt="RG International Logo"
             width={128}
             height={128}
