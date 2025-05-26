@@ -3,6 +3,21 @@ import React, { useState } from "react";
 import { categorizedServices } from "./services";
 import Layout from "../svglayout";
 
+
+interface Service {
+  id: number; // Assuming id is a number, adjust if needed
+  icon: React.ReactNode; // Assuming icon is a React element or similar
+  title: string;
+  description: string;
+}
+
+// Define a type for the category object
+interface Category {
+  category: string;
+  services: Service[]; // Use the Service type for the services array
+}
+
+
 export default function Services() {
   return (
     <Layout>
@@ -26,7 +41,7 @@ export default function Services() {
 function CategorySection({
   category,
 }: {
-  category: { category: string; services: any[] };
+  category: Category; // Use the Category type here
 }) {
   const [expanded, setExpanded] = useState(false);
 
