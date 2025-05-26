@@ -36,7 +36,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link className="flex flex-row items-center justify-center" href="/">
               <Image
-                src="/logo2.jpg"
+                src="/logo.jpg"
                 alt="RG International Logo"
                 width={90}
                 height={90}

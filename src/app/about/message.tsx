@@ -15,7 +15,7 @@ export default function MessageFromDirector() {
           {/* Image */}
           <Image
             className="relative w-full h-full object-cover "
-            src="/md.png"
+            src="/md.jpeg"
             alt="Managing Director"
             width={500}
             height={350}
