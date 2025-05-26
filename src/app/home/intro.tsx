@@ -1,19 +1,6 @@
-import Image from "next/image";
-
 export default function Intro() {
   return (
     <div className="relative flex flex-col items-center text-center text-gray-700 py-16 px-6 md:px-12 lg:px-20">
-      {/* Background Image with Next.js <Image> */}
-      <div className="absolute inset-0 opacity-20">
-        <Image
-          src="/rgintco.jpg"
-          alt="Office Background"
-          layout="fill"
-          objectFit="cover"
-          priority // Loads image faster
-        />
-      </div>
-
       {/* Content */}
       <div className="relative max-w-3xl">
         {/* Company Name */}

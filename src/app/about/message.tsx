@@ -1,11 +1,10 @@
-"use client";
 import Image from "next/image";
 
 export default function MessageFromDirector() {
   return (
     <div className="flex flex-col items-center justify-center bg-gray-100 py-20 px-4 sm:px-6 lg:px-8 text-center">
       {/* Title */}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight mb-12">
+      <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-10">
         Message from Managing Director
       </h2>
 
@@ -13,10 +12,9 @@ export default function MessageFromDirector() {
       <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-6xl gap-6 lg:gap-10">
         {/* Left Side - Managing Director Image */}
         <div className="relative w-full max-w-[400px] lg:max-w-[500px] aspect-[3/4]">
-          {/* Background Behind Image */}
           {/* Image */}
           <Image
-            className="relative w-full h-full object-cover shadow-lg rounded-lg"
+            className="relative w-full h-full object-cover "
             src="/md.png"
             alt="Managing Director"
             width={500}

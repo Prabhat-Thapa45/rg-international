@@ -2,9 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-  FaInstagram,
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
@@ -59,7 +56,7 @@ export default function Footer() {
             {/* Phone */}
             <div className="mt-1 flex items-center gap-2">
               <FaPhoneAlt className="text-blue-500 text-xl" />
-              <p>+81 123-456-7890</p>
+              <p>+81 962376573</p>
             </div>
 
             {/* Email */}
@@ -73,17 +70,8 @@ export default function Footer() {
 
       {/* Center: Social Media Icons */}
       <div className="mt-10 flex justify-center space-x-6">
-        <Link href="#" className="text-xl hover:text-blue-500">
+        <Link href="https://www.facebook.com/profile.php?id=100094504333669" className="p-3 rounded-full text-xl hover:text-blue-500 duration-500 hover:bg-white hover:-translate-0.5">
           <FaFacebookF />
-        </Link>
-        <Link href="#" className="text-xl hover:text-blue-400">
-          <FaTwitter />
-        </Link>
-        <Link href="#" className="text-xl hover:text-blue-600">
-          <FaLinkedinIn />
-        </Link>
-        <Link href="#" className="text-xl hover:text-pink-500">
-          <FaInstagram />
         </Link>
       </div>
 
